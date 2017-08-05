@@ -1,10 +1,72 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* header */
+
+header.navbar {
+  background-color: black;
+  border-bottom-color: black;
+  opacity: 0.85;
+}
+
+a#logo{
+  color:white;
+}
+
+/* top tilte */
+
+
+div.title {
+  margin-top: 60px;
+}
+
+h1.title {
+  color: white;
+  text-align: left;
+  text-shadow: 0 0 10px #000;
+  margin-bottom: 0px;
+}
+
+h2.title {
+  font-size: 2rem;
+  color: white;
+  text-align: left;
+  text-shadow: 0 0 10px #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a.title {
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+/* top sub-tile */
+
+div.sub-title {
+}
+
+h2.sub-title {
+  font-size: 3rem;
+  margin-bottom: .8rem;
+  color: black;
+  text-align: left;
+}
+
+p.sub-title {
+  line-height:1.5em;
+}
+
+a.sub-title{
+  color:#292b2c; border-color:#ccc;
+}
+
+
+
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 0px;
 }
 
 section {
