@@ -1,23 +1,59 @@
 # Railsアプリのテンプレート
 
-## サーバ起動
-- 基本
+## Preview
+https://mighty-beyond-37933.herokuapp.com/
+
+## デザインを変更する
+
+### CSS
+[Bootstrap](http://getbootstrap.com/)
+
+### ホームページのイメージ
+app/views/static_pages/home.html.erb
+
+```css
+  div.jumbotron {
+    height: 400px;
+    background: url(<%= asset_path "top.jpg" %>) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
 ```
-$ rails s
+  
+### ヘッダー
+app/assets/stylesheets/custom.scss
+
+```css
+header.navbar {
+  background-color: black;
+  border-bottom-color: black;
+  opacity: 0.85;
+}
+
+a#logo{
+  color:white;
+}
 ```
 
-- ポート指定＆localhost外からもアクセスさせる場合
+## タイトルを変更する
+
+###ベースタイトル
+/app/helpers/application_helper.rb
+
 ```
-$ rails s -p 8080 -b 0.0.0.0
+base_title = "xxx"
 ```
 
-- デーモンとして起動させる場合
+###ページタイトル
+app/views/static_pages/xxx.html.erb
+
 ```
-$ rails s -d
+<% provide(:title, 'xxx') %>
 ```
 
-## Basic認証
+## Basic認証を追加する
 /app/controller/applicationController.rb
+
 ```
 # Basic認証
 http_basic_authenticate_with name: 'username', password: 'password'
@@ -29,33 +65,4 @@ http_basic_authenticate_with name: 'username', password: 'password'
 # $ export BASE_AUTH_NAME=username
 # $ export BASE_AUTH_PASS=password
 http_basic_authenticate_with name: ENV["BASE_AUTH_NAME"], password: ENV["BASE_AUTH_PASS"]
-```
-
-## タイトル
-- ベースタイトル
-  /app/helpers/application_helper.rb
-```
-base_title = "Ruby on Rails Tutorial Sample App"
-```
-
-- ページタイトル
-  app/views/static_pages/xxx.html.erb
-```
-<% provide(:title, 'xxx') %>
-```
-
-## コントローラ追加
-```
-$ rails generate controller StaticPages home help
-```
-
-# モデル追加
-```
-$ rails generate scaffold user name:string age:integer
-$ rake db:migrate
-```
-
-## プリコンパイル
-```
-$ RAILS_ENV=production rake assets:precompile
 ```
