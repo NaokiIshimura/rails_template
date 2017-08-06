@@ -1,0 +1,60 @@
+<% provide(:title, 'Form Output') %>
+
+<div class="col-md-8 col-md-offset-2">
+
+  <h1>
+    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+    Form#output
+  </h1>
+  <p>Find me in app/views/form/output.html.erb</p>
+
+  <table class="table table-striped">
+    <tr>
+      <th></th>
+      <th>select</th>
+      <th>textbox</th>
+      <th>textarea</th>
+      <th>checkbox</th>
+      <th>radiobutton</th>
+    </tr>
+
+    <tr>
+      <td>params</td>
+      <td><%= @select %></td>
+      <td><%= @text_field %></td>
+      <td><%= @text_area %></td>
+      <td><%= @check_box %></td>
+      <td><%= @radio_button %></td>
+    </tr>
+
+    <tr>
+      <td>nil?</td>
+      <td><%= @select.nil? %></td>
+      <td><%= @text_field.nil? %></td>
+      <td><%= @text_area.nil? %></td>
+      <td><%= @check_box.nil? %></td>
+      <td><%= @radio_button.nil? %></td>
+    </tr>
+
+    <tr>
+      <td>blank?</td>
+      <td><%= @select.blank? %></td>
+      <td><%= @text_field.blank? %></td>
+      <td><%= @text_area.blank? %></td>
+      <td><%= @check_box.blank? %></td>
+      <td><%= @radio_button.blank? %></td>
+    </tr>
+
+    <tr>
+      <td>present?</td>
+      <td><%= @select.present? %></td>
+      <td><%= @text_field.present? %></td>
+      <td><%= @text_area.present? %></td>
+      <td><%= @check_box.present? %></td>
+      <td><%= @radio_button.present? %></td>
+    </tr>
+
+
+  </table>
+
+</div>

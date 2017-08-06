@@ -10,11 +10,11 @@
 <% if request.path_info == root_path %>
     <%= yield %>
 <% else %>
-    <div class="container">
+    <div class="container body">
       <%= yield %>
     </div>
 <% end %>
-<div class="container">
+<div class="container footer">
   <%= render 'layouts/footer' %>
 </div>
 </body>

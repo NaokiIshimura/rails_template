@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* ------ */
+/* custom */
+/* ------ */
+
 /* header */
 
 header.navbar {
@@ -61,7 +65,21 @@ a.sub-title{
   color:#292b2c; border-color:#ccc;
 }
 
+/* body */
 
+div.container.body {
+  margin-top: 50px;
+}
+
+/* footer */
+div.container.footer {
+
+}
+
+
+/* -------------- */
+/* rails tutorial */
+/* -------------- */
 
 /* universal */
 
@@ -95,14 +113,14 @@ h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
   color: #777;
 }
