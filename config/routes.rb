@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'form_object/input'
+
+  get 'form_object/output' => 'form_object#input'
+  post 'form_object/output'
+
   get 'form/input'
 
   get 'form/output' => 'form#input'

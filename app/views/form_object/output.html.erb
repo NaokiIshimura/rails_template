@@ -1,0 +1,60 @@
+<% provide(:title, 'FormObject Output') %>
+
+<div class="col-md-8 col-md-offset-2">
+
+  <h1>
+    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+    FormObject#output
+  </h1>
+  <p>Find me in app/views/form_object/output.html.erb</p>
+
+  <table class="table table-striped">
+    <tr>
+      <th></th>
+      <th>select</th>
+      <th>textbox</th>
+      <th>textarea</th>
+      <th>checkbox</th>
+      <th>radiobutton</th>
+    </tr>
+
+    <tr>
+      <td>params</td>
+      <td><%= @feedback.select %></td>
+      <td><%= @feedback.text_field %></td>
+      <td><%= @feedback.text_area %></td>
+      <td><%= @feedback.check_box %></td>
+      <td><%= @feedback.radio_button %></td>
+    </tr>
+
+    <tr>
+      <td>nil?</td>
+      <td><%= @feedback.select.nil? %></td>
+      <td><%= @feedback.text_field.nil? %></td>
+      <td><%= @feedback.text_area.nil? %></td>
+      <td><%= @feedback.check_box.nil? %></td>
+      <td><%= @feedback.radio_button.nil? %></td>
+    </tr>
+
+    <tr>
+      <td>blank?</td>
+      <td><%= @feedback.select.blank? %></td>
+      <td><%= @feedback.text_field.blank? %></td>
+      <td><%= @feedback.text_area.blank? %></td>
+      <td><%= @feedback.check_box.blank? %></td>
+      <td><%= @feedback.radio_button.blank? %></td>
+    </tr>
+
+    <tr>
+      <td>present?</td>
+      <td><%= @feedback.select.present? %></td>
+      <td><%= @feedback.text_field.present? %></td>
+      <td><%= @feedback.text_area.present? %></td>
+      <td><%= @feedback.check_box.present? %></td>
+      <td><%= @feedback.radio_button.present? %></td>
+    </tr>
+
+
+  </table>
+
+</div>
