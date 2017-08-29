@@ -13,13 +13,19 @@
 
 <div class="jumbotron">
   <div class="container title">
-    <h1 class="title">Sample App</h1>
+
+    <h1 class="title">
+      <%= fa_icon 'diamond', text: 'Sample App', right: false %>
+    </h1>
 
     <h2 class="title">
-        This is a sample application.
+      This is a sample application.
     </h2>
 
-    <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary title" %>
+    <%= link_to '#', class: "btn btn-lg btn-primary title" do %>
+      <%= fa_icon 'diamond', text: 'Sign up now!', right: false %>
+    <% end %>
+
   </div>
 </div>
 
