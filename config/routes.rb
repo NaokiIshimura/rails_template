@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'validation/form'
+  post 'validation/form'
+
   get 'form_object/input'
 
   get 'form_object/output' => 'form_object#input'
