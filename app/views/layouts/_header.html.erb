@@ -16,11 +16,14 @@
           <ul class="dropdown-menu">
             <li><%= link_to 'FormTag', form_input_path %></li>
             <li><%= link_to 'FormObject', form_object_input_path %></li>
+
             <li role="separator" class="divider"></li>
             <li class="dropdown-header">Validation</li>
             <li><%= link_to 'Sample', validation_form_path %></li>
+
             <li role="separator" class="divider"></li>
-            <li><a href="#">Menu</a></li>
+            <li class="dropdown-header">Other</li>
+            <li><%= link_to 'Logger', logger_path %></li>
           </ul>
         </li><!-- dropdown -->
 
