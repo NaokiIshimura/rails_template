@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'logger/log_puts'
+  get 'logger/debug'
+  get 'logger/info'
+  get 'logger/warn'
+  get 'logger/error'
+  get 'logger/fatal'
+  get 'logger' => 'logger#index'
+
   get 'validation/form'
   post 'validation/form'
 
