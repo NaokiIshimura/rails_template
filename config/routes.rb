@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'download/index'
+  get 'download_data' => 'download#donwlonad_data'
+
   get 'logger/log_puts'
   get 'logger/debug'
   get 'logger/info'
